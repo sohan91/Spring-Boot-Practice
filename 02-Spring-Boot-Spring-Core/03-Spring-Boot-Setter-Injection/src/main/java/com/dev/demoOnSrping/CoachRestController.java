@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CoachRestController{
-       Coach myCoach;
+       CricketCoach myCoach;
 
        @Autowired
-    public void myCoach(Coach coach)
+    public void myCoach(CricketCoach coach)
        {
            myCoach = coach;
        }
