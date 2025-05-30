@@ -1,11 +1,9 @@
-package com.dev.demoOnSrping.rest;
+package com.dev.demoOnSrping.Controller;
 
 import com.dev.demoOnSrping.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -27,9 +25,11 @@ public class CoachRestController{
        return coach1.dailyWorkOut();
    }
     @GetMapping("/check")
-    private String hasSameInstance()
+
+    public String getScope()
     {
-        return "Is coach1&coach2 has Same Instance: "+(coach1 == coach2);
+        return coach1.getClass().getSimpleName()+(coach1 == coach2 ?" is a SingleTon Scope ":" not is a SingleTon Scope ")+
+        ("<br> coach1 HasCode is: "+coach1.hashCode()+" ,coach1 HashCode is: "+coach2.hashCode());
     }
 }
 
