@@ -8,4 +8,7 @@ public interface StudentDAO {
     List<Student> getAllStudentDetails();
     List<Student> getOrderByStudentName();
     List<Student> findByFirstName(String name);
+    void update(Student student);
+    void delete(int id);
+    int deleteAll();
 }

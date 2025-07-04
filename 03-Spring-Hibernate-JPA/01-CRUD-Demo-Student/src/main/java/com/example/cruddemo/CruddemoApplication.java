@@ -23,13 +23,16 @@ public class CruddemoApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO student)
    {
 	   return runner->{
-//				updateInDB(student);
-		   readStudentDetails(student);
-		   getAllStudent(student);
-		   getFirstNameList(student);
+				insertInDB(student);
+		  // readStudentDetails(student);
+//		   getAllStudent(student);
+//		   getFirstNameList(student);
+//		   updateName(student);
+		  // remove(student);
+//		   removeAll(student);
 	   };
    }
-   public void updateInDB(StudentDAO studentDAO)
+   public void insertInDB(StudentDAO studentDAO)
    {
 	   System.out.println("Object is Creating....");
 	   List<Student> students = new ArrayList<>();
@@ -45,7 +48,7 @@ public class CruddemoApplication {
    public void readStudentDetails(StudentDAO studentDAO)
    {
 
-	   int id = 5;
+	   int id = 2;
 	   try {
 		   System.out.println("Retriving Student Details of ID: " + id);
 		   Student studentDetail = studentDAO.getDetails(id);
@@ -83,5 +86,34 @@ public class CruddemoApplication {
 		   System.out.println(student);
 	   }
 	   System.out.println("-".repeat(30));
+   }
+   public void updateName(StudentDAO studentDAO)
+   {
+      int id = 2;
+	  Student student = studentDAO.getDetails(id);
+	   System.out.println("Student is: "+student);
+	   student.setFirstName("SreeRamaDasu");
+	   studentDAO.update(student);
+	   System.out.println("Successfully Updates");
+   }
+
+   public void remove(StudentDAO studentDAO)
+   {
+	   int id = 4;
+	   try {
+		   System.out.println("Delete Student ID:" + id);
+		   studentDAO.delete(id);
+		   System.out.println("Successfully Deleted!!!");
+	   }catch (Exception e)
+	   {
+		   System.out.println("Already Student is Deleted!! ");
+	   }
+   }
+
+   public void removeAll(StudentDAO studentDAO)
+   {
+	   System.out.println("Deleting All Student...");
+	   int affected = studentDAO.deleteAll();
+	   System.out.println(affected+" were affected...");
    }
 }

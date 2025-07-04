@@ -48,4 +48,25 @@ public class StudDAOImplementation implements StudentDAO{
         return query.getResultList();
     }
 
+    @Override
+    @Transactional
+    public void update(Student student) {
+        manager.merge(student);
+    }
+
+    @Override
+    @Transactional
+    public void delete(int id)
+    {
+      Student deleteStd = manager.find(Student.class,id);
+      manager.remove(deleteStd);
+    }
+
+    @Override
+    @Transactional
+    public int deleteAll()
+    {
+        int rowAffected = manager.createQuery("DELETE FROM Student").executeUpdate();
+        return rowAffected;
+    }
 }
