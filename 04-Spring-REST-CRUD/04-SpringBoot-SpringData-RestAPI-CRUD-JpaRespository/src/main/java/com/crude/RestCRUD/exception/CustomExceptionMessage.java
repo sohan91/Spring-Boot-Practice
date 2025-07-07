@@ -46,7 +46,7 @@ public class CustomExceptionMessage {
         return "CustomExceptionMessage{" +
                 "status=" + status +
                 ", message='" + message + '\'' +
-                ", time=" + timeStamp +
+                ", timeStamp=" + timeStamp +
                 '}';
     }
 }

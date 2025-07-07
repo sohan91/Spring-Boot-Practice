@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aea16870-9294-45d6-b001-0debb08cd812" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/src/main/java/com/example/demo/entity/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/src/main/java/com/example/demo/exception/ExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/src/main/java/com/example/demo/exception/StudentErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/src/main/java/com/example/demo/exception/StudentNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/src/main/java/com/example/demo/rest/RestControllerDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/01-SpringBoot-ExceptionHandling/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/main/java/com/crude/RestCRUD/RestCrudApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/main/java/com/crude/RestCRUD/controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/main/java/com/crude/RestCRUD/dao/DAOImplementaion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/main/java/com/crude/RestCRUD/dao/DAOInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/main/java/com/crude/RestCRUD/entity/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/main/java/com/crude/RestCRUD/exception/CustomException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/main/java/com/crude/RestCRUD/exception/CustomExceptionMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/main/java/com/crude/RestCRUD/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/main/java/com/crude/RestCRUD/service/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../04-Spring-REST-CRUD/02-SpringBoot-RestCRUD/src/test/java/com/crude/RestCRUD/RestCrudApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2zXaOemNeSBl1oDptxK7awtO8m8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aea16870-9294-45d6-b001-0debb08cd812" name="Changes" comment="" />
+      <created>1751879842804</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751879842804</updated>
+    </task>
+    <servers />
+  </component>
+</project>
