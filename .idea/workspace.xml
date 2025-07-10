@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80a2d9af-977d-4e77-bdc6-15041163abdb" name="Changes" comment="" />
+    <list default="true" id="80a2d9af-977d-4e77-bdc6-15041163abdb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/06-Spring-Boot-Spring MVC/01-Spring-MVC-Thymeleaf/src/main/java/com/mvc/SpringMVC/controller/DemoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06-Spring-Boot-Spring MVC/01-Spring-MVC-Thymeleaf/src/main/java/com/mvc/SpringMVC/controller/ProcessFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06-Spring-Boot-Spring MVC/01-Spring-MVC-Thymeleaf/src/main/resources/static/CSS/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06-Spring-Boot-Spring MVC/01-Spring-MVC-Thymeleaf/src/main/resources/templates/check-model.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06-Spring-Boot-Spring MVC/01-Spring-MVC-Thymeleaf/src/main/resources/templates/hello-world-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06-Spring-Boot-Spring MVC/01-Spring-MVC-Thymeleaf/src/main/resources/templates/hello-world-process.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06-Spring-Boot-Spring MVC/01-Spring-MVC-Thymeleaf/src/main/resources/templates/helloworld.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/java/com/crude/RestCRUD/RestCrudApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/java/com/crude/RestCRUD/controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/java/com/crude/RestCRUD/dao/EmployeeJpaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/java/com/crude/RestCRUD/entity/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/java/com/crude/RestCRUD/exception/CustomException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/java/com/crude/RestCRUD/exception/CustomExceptionMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/java/com/crude/RestCRUD/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/java/com/crude/RestCRUD/security/UserSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/java/com/crude/RestCRUD/service/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/java/com/crude/RestCRUD/service/EmployeeServiceImplementation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-Spring-Rest-Security/01-SpringBoot-Scurity-Rest/src/test/java/com/crude/RestCRUD/RestCrudApplicationTests.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,21 +36,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2zPuHqxu1NkXDOLxC7HyMcQlNmX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
