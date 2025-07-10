@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Process-Form</title>
 </head>
 <body>
-$END$
+Hey <span th:text = "${param.studentName}"/>,Welcome to Spring...
+<br><br>
+Student Name: <span th:text = "${param.studentName}"/>
+
 </body>
 </html>
