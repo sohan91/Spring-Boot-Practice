@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Submit-Form</title>
+    <h2>Confirmation Form</h2>
 </head>
 <body>
-$END$
+<b>The Student is Confirmed</b>: <span th:text="${student.firstName}+' '+${student.lastName}"></span>
 </body>
 </html>
