@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Form</title>
     <h2>Student Application Form</h2>
 </head>
 <body>
@@ -14,6 +14,25 @@
         Last Name:<label>
         <input type="text" th:field = "${theStudent.lastName}">
     </label>
+        <br><br>
+        <select th:field="${theStudent.country}">
+            <option th:value="India">India</option>
+            <option th:value="Africa">Africa</option>
+            <option th:value="USA">USA</option>
+            <option th:value="Russia">Russia</option>
+            <option th:value="Australia">Australia</option>
+        </select>
+        <br><br>
+        Favourite Programming Language:
+            <input type="radio" th:field="${theStudent.favLang}" th:value="Go">Go</input>
+        <input type="radio" th:field="${theStudent.favLang}" th:value="Java">Java</input>
+        <input type="radio" th:field="${theStudent.favLang}" th:value="Python">Python</input>
+        <input type="radio" th:field="${theStudent.favLang}" th:value="Ruby">Ruby</input>
+        <br><br>
+        Favourite Operating System:
+        <input type="checkbox" th:field="${theStudent.favSystem}" th:value="MacOs">MacOs</input>
+        <input type="checkbox" th:field="${theStudent.favSystem}" th:value="Windows">Windows</input>
+        <input type="checkbox" th:field="${theStudent.favSystem}" th:value="Linux">Linux</input>
         <br><br>
         <input type="submit" value="Submit">
     </form>
