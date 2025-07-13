@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+    <style>
+        body {
+           font-family: 'Times New Roman';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:Gray;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 10px 40px;
+            border-radius: 10px;
+            width: 370px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>Add New Employee</h2>
+    <form th:action="@{/employees/save}" th:object="${addEmployee}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <input type="text" th:field="*{firstName}" placeholder="First Name" required>
+        <input type="text" th:field="*{lastName}" placeholder="Last Name" required>
+        <input type="email" th:field="*{email}" placeholder="Email" required>
+        <button type="submit">Save</button>
+    </form>
+</div>
+</body>
+</html>
