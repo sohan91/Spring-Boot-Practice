@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit-Form</title>
+    <h2>Confirmation Form</h2>
+</head>
+<body>
+<b>The Student is Confirmed</b>: <span th:text="${student.firstName}+' '+${student.lastName}"></span>
+<br><br>
+<b>Country</b>:<span th:text="${student.country}"></span>
+<br><br>
+<b>Favourite Programming Language: </b><span th:text="${student.favLang}"></span>
+<br><br>
+<b>Favourite Operating System: </b><span th:text="${student.favSystem}"></span>
+<br><br>
+</body>
+</html>
