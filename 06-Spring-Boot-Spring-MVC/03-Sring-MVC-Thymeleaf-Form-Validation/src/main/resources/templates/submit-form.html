@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Submission Confirmation</title>
+    <style>
+        body {
+            background-color: #f3f3f3;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .confirmation-box {
+            background-color:LightGray;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .info-value {
+            color: #222;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .highlight {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+<div class="confirmation-box">
+    <h2>Submission Confirmed</h2>
+
+    <div>
+        <span class="info-label">Confirmation Name:</span>
+        <span class="info-value highlight" th:text="${customer.firstName} + ' ' + ${customer.lastName}"></span>
+        <br><br>
+    </div>
+
+    <div>
+        <span class="info-label">Sold Passes:</span>
+        <span class="info-value" th:text="${customer.freePasses}"></span>
+        <br><br>
+    </div>
+
+    <div>
+        <span class="info-label">Postal Code:</span>
+        <span class="info-value" th:text="${customer.postalCode}"></span>
+        <br><br>
+    </div>
+
+    <div>
+        <span class="info-label">Course Code:</span>
+        <span class="info-value" th:text="${customer.courseCode}"></span>
+        <br><br>
+    </div>
+</div>
+</body>
+</html>
