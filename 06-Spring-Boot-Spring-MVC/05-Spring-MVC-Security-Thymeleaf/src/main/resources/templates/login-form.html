@@ -1,10 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" >
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Login-Form</title>
+    <style>
+        form
+{
+  width:250px;
+
+  background-color: LightGrey;
+}
+.container
+{
+  height: 230px;
+ padding-top:40px ;
+ padding-left: 15px;
+ border: 1px solid black;
+ border-radius: 3px;
+ column-gap: 20px;
+}
+input
+{
+  height:25px;
+  border-radius: 5px;
+  border: 2px solid;
+}
+.button
+{
+  margin-bottom: 10px;
+  width:60px;
+  background-color: LightBlue;
+  color: black;
+  border: 1px solid black;
+}
+i{
+  color:red;
+  font-size:14  px;
+}
+        label
+        {
+        padding-top:10px;
+}
+        </style>
 </head>
 <body>
-$END$
+<h2>CUSTOM LOGIN FORM</h2>
+<hr>
+<form action="#" th:action="@{/authenticateUser}" method="POST">
+<div class="container">
+    <div class="cont">
+        <label>
+       username: <input type="text" name="username">
+        </label><br><br>
+        <label>
+            password: <input type="password" name="password">
+        </label><br><br>
+        <div th:if="${param.error}">
+            <i>Sorry!!Enter details re invalid username/password</i>
+        </div><br>
+        <div th:if="${param.logout}">
+            <i>have been logged out!!</i>
+        </div><br>
+        <label>
+            <input type="submit" name="login" class="button">
+        </label>
+    </div>
+</div>
+    </form>
 </body>
 </html>

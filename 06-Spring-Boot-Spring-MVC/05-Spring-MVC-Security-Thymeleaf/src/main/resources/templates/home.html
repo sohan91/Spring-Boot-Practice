@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
-    <title>SuccessFull-Authenticate</title>
+    <title>Successfully Authenticated</title>
 </head>
 <body>
- <h2>
-   SUCCESSFULLY LOGIN!!!!
- </h2>
+<h2>SUCCESSFULLY LOGGED IN!</h2>
+<hr>
+
+<div>
+    User: <span sec:authentication="principal.username"></span><br><br>
+    Role(s): <span sec:authentication="authorities"></span><br><br>
+</div>
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Logout">
+</form>
 </body>
 </html>
