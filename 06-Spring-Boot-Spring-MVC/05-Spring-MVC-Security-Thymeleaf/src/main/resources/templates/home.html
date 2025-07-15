@@ -3,7 +3,13 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
-    <title>Successfully Authenticated</title>
+    <title>Home</title>
+    <style>
+        body
+{
+background-color:LightBlue;
+}
+    </style>
 </head>
 <body>
 <h2>SUCCESSFULLY LOGGED IN!</h2>
@@ -13,7 +19,26 @@
     User: <span sec:authentication="principal.username"></span><br><br>
     Role(s): <span sec:authentication="authorities"></span><br><br>
 </div>
+<hr><br>
+<div sec:authorize="hasRole('MANAGER')">
+    <p>
+        <a th:href="@{/leader}">
+        Render to Leader
+        </a>
+        {Only MANAGER able to access}
+    </p>
+<hr>
+</div>
 
+
+<div sec:authorize="hasRole('ADMIN')">
+<p>
+    <a th:href="@{/system}">
+        Render to System
+    </a>
+    {Only for ADMIN can access}
+</p>
+</div>
 <form th:action="@{/logout}" method="post">
     <input type="submit" value="Logout">
 </form>

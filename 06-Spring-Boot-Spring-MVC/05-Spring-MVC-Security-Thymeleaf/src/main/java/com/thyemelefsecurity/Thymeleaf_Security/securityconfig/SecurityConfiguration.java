@@ -27,13 +27,17 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity security) throws Exception
     {
-        security.authorizeHttpRequests(configure->configure.anyRequest().authenticated()
+        security.authorizeHttpRequests(configure->
+                        configure.requestMatchers("/").hasRole("EMPLOYEE")
+                                .requestMatchers("/leader/**").hasRole("MANAGER")
+                                .requestMatchers("/system/**").hasRole("ADMIN")
+                                .anyRequest().authenticated()
                 )
                 .formLogin(form->form.loginPage("/showLoginPage")
                 .loginProcessingUrl("/authenticateUser")
-                        .defaultSuccessUrl("/home", true)
+                        .defaultSuccessUrl("/", true)
                         .permitAll()
-                )
+                ).exceptionHandling(configure->configure.accessDeniedPage("/access-denied"))
                         .logout(LogoutConfigurer::permitAll);
         return security.build();
     }
