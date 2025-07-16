@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <title>Employee Directory</title>
     <style>
         body {
             font-family: 'Times New Roman';
-            background-color:Gray;
+            background-color: Gray;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 40px;
-            scrollbar-color: auto;
         }
 
-        h2 {
-            margin-bottom: 10px;
+        h1 {
+            color: white;
         }
 
         .btn {
@@ -26,14 +26,13 @@
             border-radius: 5px;
             font-size: 18px;
             margin-bottom: 20px;
-
         }
 
         table {
             border-collapse: collapse;
             width: 80%;
             background-color: white;
-            border:1px solid black;
+            border: 1px solid black;
         }
 
         th, td {
@@ -50,42 +49,38 @@
         tr:hover {
             background-color: #f1f1f1;
         }
-        td
-        {
-        font-size:20px;
+
+        td {
+            font-size: 20px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
         }
 
         .actions a {
-            margin-right: 10px;
-            color: #007BFF;
             text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: bold;
         }
 
-        .actions a:hover {
-            text-decoration: underline;
+        #edit {
+            background-color: #28a745;
+            color: white;
         }
-        h1
-        {
-        color:white;
-        }
-        #del
-        {
-          background-color:Crimson;
-              color:white;
-              height:15px;
-               text-decoration: none;
-        }
-        #edit
-        {
- text-decoration: none;
-            color:white;
-            height:15px;
+        #del {
+            background-color: Crimson;
+            color: white;
         }
     </style>
 </head>
 <body>
 <h1>Employee Directory</h1>
-<a th:href="@{/employees/formForAdd}" class="btn" >Add Employee</a>
+
+<a th:href="@{/employees/formForAdd}" class="btn"
+   sec:authorize="hasAnyRole('MANAGER','ADMIN')">Add Employee</a>
 
 <table>
     <thead>
@@ -93,7 +88,7 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
-        <th>Actions</th>
+        <th sec:authorize="hasAnyRole('MANAGER','ADMIN')">Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -101,10 +96,16 @@
         <td th:text="${emp.firstName}"></td>
         <td th:text="${emp.lastName}"></td>
         <td th:text="${emp.email}"></td>
-        <td class="actions">
-            <a th:href="@{/employees/updateEmployee(employeeId=${emp.id})}" class="btn" id="edit">Update</a>
+        <td class="actions" sec:authorize="hasAnyRole('MANAGER','ADMIN')">
+
+                  <a th:href="@{/employees/updateEmployee(employeeId=${emp.id})}"
+                     sec:authorize="hasAnyRole('MANAGER','ADMIN')" id="edit">Update
+                  </a>
             <a th:href="@{/employees/deleteEmployee(employeeId=${emp.id})}"
-               onclick="return confirm('Are you sure you want to delete this employee?')" class="btn" id="del">Delete</a>
+               sec:authorize="hasRole('ADMIN')"
+               onclick="return confirm('Are you sure you want to delete this employee?')" id="del">
+                Delete
+            </a>
         </td>
     </tr>
     </tbody>

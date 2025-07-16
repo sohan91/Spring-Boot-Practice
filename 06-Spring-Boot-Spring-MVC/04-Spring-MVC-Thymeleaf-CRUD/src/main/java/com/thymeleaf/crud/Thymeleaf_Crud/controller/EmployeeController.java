@@ -17,14 +17,19 @@ import java.util.Map;
 @RequestMapping("/employees")
 public class EmployeeController {
     private final EmployeeService service;
-    private ObjectMapper mapper;
 
-    public EmployeeController(EmployeeService theService,ObjectMapper theMapper)
+
+    public EmployeeController(EmployeeService theService)
 
     {
         service = theService;
-        mapper = theMapper;
     }
+    @GetMapping("/login")
+    public String login()
+    {
+        return "login";
+    }
+
     @GetMapping("/list")
     public String list(Model model)
     {
