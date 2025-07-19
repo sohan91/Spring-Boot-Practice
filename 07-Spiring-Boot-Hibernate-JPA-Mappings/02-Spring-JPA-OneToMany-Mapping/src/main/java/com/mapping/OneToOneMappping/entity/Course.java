@@ -16,7 +16,7 @@ public class Course {
 
     @ManyToOne(cascade = {CascadeType.MERGE,CascadeType.DETACH,
             CascadeType.PERSIST,CascadeType.REFRESH})
-    @JoinColumn(name="instructor_id")
+    @JoinColumn(name = "instructor_id", nullable = true)
     private Instructor instructor;
 public Course()
 {
