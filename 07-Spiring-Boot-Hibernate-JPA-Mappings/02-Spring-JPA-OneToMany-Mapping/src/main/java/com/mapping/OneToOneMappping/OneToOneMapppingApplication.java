@@ -3,6 +3,7 @@ package com.mapping.OneToOneMappping;
 import com.mapping.OneToOneMappping.dao.InstructorDAO;
 import com.mapping.OneToOneMappping.entity.Course;
 import com.mapping.OneToOneMappping.entity.Instructor;
+import com.mapping.OneToOneMappping.entity.Review;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -30,7 +31,10 @@ public class OneToOneMapppingApplication {
 //		   updateInstructor(dao);
 //		   updateCourse(dao);
 //		   deleteInstructorById(dao);
-		   deleteCourseById(dao);
+//		   deleteCourseById(dao);
+//		   saveCourseWithReview(dao);
+//		   findCourseWithReview(dao);
+		   deleteCourseWithReview(dao);
 	   };
    }
     public void add(InstructorDAO dao)
@@ -99,5 +103,28 @@ public class OneToOneMapppingApplication {
 		dao.deleteCourseById(id);
 		System.out.println("Successfully Deleted Course with ID: "+id);
 	}
-
+	private void saveCourseWithReview(InstructorDAO instructorDAO)
+	{
+		Course course = new Course("C-Programming Beginner to Advance");
+		course.add(new Review("Course was really good"));
+		course.add(new Review("Expecting more practical example"));
+		course.add(new Review("Good...Keep it Up!!"));
+		System.out.println("Saved the course....");
+		System.out.println(course);
+		System.out.println(course.getReviewList());
+		instructorDAO.saveReviewsOnCourse(course);
+	}
+	private void findCourseWithReview(InstructorDAO instructorDAO)
+	{
+		int id = 5;
+		Course course = instructorDAO.findCourseWithReviewById(id);
+		System.out.println("Course: "+course);
+		System.out.println("Reviews: "+course.getReviewList());
+	}
+	private void deleteCourseWithReview(InstructorDAO dao)
+	{
+		int id = 5;
+		dao.deleteCourseWithReviewById(id);
+		System.out.println("Successfully Deleted Course with Id: "+id);
+	}
 }

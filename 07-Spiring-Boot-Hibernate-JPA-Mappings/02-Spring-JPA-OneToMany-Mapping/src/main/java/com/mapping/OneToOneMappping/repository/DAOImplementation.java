@@ -3,6 +3,7 @@ package com.mapping.OneToOneMappping.repository;
 import com.mapping.OneToOneMappping.dao.InstructorDAO;
 import com.mapping.OneToOneMappping.entity.Course;
 import com.mapping.OneToOneMappping.entity.Instructor;
+import com.mapping.OneToOneMappping.entity.Review;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -83,6 +84,27 @@ public class DAOImplementation implements InstructorDAO {
     public void deleteCourseById(int id) {
         Course course = manager.find(Course.class,id);
         manager.remove(course);
+    }
+
+    @Override
+    @Transactional
+    public void saveReviewsOnCourse(Course course) {
+        manager.persist(course);
+    }
+
+    @Override
+    public Course findCourseWithReviewById(int id) {
+        TypedQuery<Course> courseTypedQuery = manager.createQuery("SELECT c FROM Course c JOIN FETCH " +
+                                                                    "c.reviewList WHERE c.id = :theId",Course.class);
+        courseTypedQuery.setParameter("theId",id);
+        return courseTypedQuery.getSingleResult();
+    }
+
+    @Override
+    @Transactional
+    public void deleteCourseWithReviewById(int id) {
+      Course course = manager.find(Course.class,id);
+      manager.remove(course);
     }
 }
 

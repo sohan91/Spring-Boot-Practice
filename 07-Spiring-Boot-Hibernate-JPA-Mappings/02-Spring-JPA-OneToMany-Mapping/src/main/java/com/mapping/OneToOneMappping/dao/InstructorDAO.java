@@ -2,6 +2,7 @@ package com.mapping.OneToOneMappping.dao;
 
 import com.mapping.OneToOneMappping.entity.Course;
 import com.mapping.OneToOneMappping.entity.Instructor;
+import com.mapping.OneToOneMappping.entity.Review;
 
 import java.util.List;
 
@@ -15,4 +16,7 @@ public interface InstructorDAO {
     void updateCourse(Course course);
     void deleteInstructorById(int id);
     void deleteCourseById(int id);
+    void saveReviewsOnCourse(Course course);
+    Course findCourseWithReviewById(int id);
+    void deleteCourseWithReviewById(int id);
 }

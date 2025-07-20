@@ -67,4 +67,19 @@ public class InstructorService implements InstructorDAO {
     public void deleteCourseById(int id) {
         instructorDAO.deleteCourseById(id);
     }
+
+    @Override
+    public void saveReviewsOnCourse(Course course) {
+        instructorDAO.saveReviewsOnCourse(course);
+    }
+
+    @Override
+    public Course findCourseWithReviewById(int id) {
+        return instructorDAO.findCourseWithReviewById(id);
+    }
+
+    @Override
+    public void deleteCourseWithReviewById(int id) {
+        instructorDAO.deleteCourseWithReviewById(id);
+    }
 }
