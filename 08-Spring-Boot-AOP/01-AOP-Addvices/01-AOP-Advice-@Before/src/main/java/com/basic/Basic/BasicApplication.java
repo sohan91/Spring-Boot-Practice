@@ -25,6 +25,8 @@ public class BasicApplication {
 	public void add(AccountDAO accountDAO)
 	{
 		accountDAO.addAccount();
+		System.out.println("-".repeat(30)+"\nOne More Check\n"+"-".repeat(30));
+        accountDAO.addAccount();
 	}
 
 }
