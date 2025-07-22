@@ -1,6 +1,8 @@
 package com.basic.Basic;
 
 import com.basic.Basic.dao.AccountDAO;
+import com.basic.Basic.dao.ManagementDAO;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,18 +17,19 @@ public class BasicApplication {
 		SpringApplication.run(BasicApplication.class, args);
 	}
 	@Bean
-    public CommandLineRunner commandLineRunner(AccountDAO dao)
+    public CommandLineRunner commandLineRunner( AccountDAO dao,
+											   ManagementDAO managementDAO)
 	{
 		return runner->
 		{
-			add(dao);
+			add(dao,managementDAO);
 		};
 	}
-	public void add(AccountDAO accountDAO)
+	public void add(@Qualifier("accountImplementation") AccountDAO dao,
+					@Qualifier("managementImplementation") ManagementDAO managementDAO)
 	{
-		accountDAO.addAccount();
-		System.out.println("-".repeat(30)+"\nOne More Check\n"+"-".repeat(30));
-        accountDAO.addAccount();
+		dao.addAccount();
+	    managementDAO.addAccount();
 	}
 
 }
