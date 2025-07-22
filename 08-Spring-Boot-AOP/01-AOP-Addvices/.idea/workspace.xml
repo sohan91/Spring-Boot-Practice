@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e300d955-5d89-44bc-ace4-0a5a4d12f941" name="Changes" comment="" />
+    <list default="true" id="e300d955-5d89-44bc-ace4-0a5a4d12f941" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/01-AOP-Advice-@Before/src/main/java/com/basic/Basic/dao/ManagementDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-AOP-Advice-@Before/src/main/java/com/basic/Basic/repository/ManagementImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-AOP-Advice-@Pointcut-Declaration/src/main/java/com/basic/Basic/aspect/AuthorizeAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-AOP-Advice-@Pointcut-Declaration/src/main/java/com/basic/Basic/aspect/LoginAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-AOP-Advice-@Pointcut-Declaration/src/main/java/com/basic/Basic/aspect/SecurityAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-AOP-Advice-@AfterReturning/src/main/java/com/basic/Basic/aspect/ListOfHolders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-AOP-Advice-@Before/src/main/java/com/basic/Basic/BasicApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-AOP-Advice-@Before/src/main/java/com/basic/Basic/BasicApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-AOP-Advice-@Before/src/main/java/com/basic/Basic/repository/AccountImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/01-AOP-Advice-@Before/src/main/java/com/basic/Basic/repository/AccountImplementation.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,21 +19,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="30C0x6AzlI2T0WuACW7tCElXu8V" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
